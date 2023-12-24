@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+
+    <body>
+    <div class="container">
+        <h1 style="text-align: center">Welcome to Bookings Cancellation Prediction</h1>
+        <h5 style="text-align: center"> Predict the bookings that are likely to be cancelled </h5>
+        <form method="POST"
+              action="/classify">
+
+            <div class="row">
+                <div class="col">
+                    <div>Number of adults: <input class="form-control" name="no_of_adults" type="number" value="1"></div>
+
+                    <div>Number of Children: <input class="form-control" name="no_of_children" type="number"
+                                                      value="0"></div>
+
+                    <div>Number of Weekend nights : <input class="form-control" name="no_of_weekend_nights" type="number"
+                                                      value="0"></div>
+
+                </div>
+                    <div>Number of Week Nights : <input class="form-control" name="no_of_week_nights" type="number" value="1"></div>
+            </div>
+
+                    <label>Type of Meal</label>
+                        <select name="type_of_meal_plan" class="form-control">
+                            <option value="Not Selected">Not Selected</option>
+                            <option value="Meal Plan 1">Meal Plan 1</option>
+                            <option value="Meal Plan 2">Meal Plan 2</option>
+                        </select>
+                    <div>
+
+
+                        <label>Car Parking Required ? </label>
+                        <select name="required_car_parking_space" class="form-control">
+                            <option value="1">YES</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+
+                     <div>
+                        <label>Room Type Reserved </label>
+                        <select name="room_type_reserved" class="form-control">
+                            <option value="room_type_1">Room Type 1</option>
+                            <option value="room_type_2">Room Type 2</option>
+                            <option value="room_type_3">Room Type 3</option>
+                            <option value="room_type_4">Room Type 4</option>
+                            <option value="room_type_5">Room Type 5</option>
+                            <option value="room_type_6">Room Type 6</option>
+                            <option value="room_type_7">Room Type 7</option>
+                        </select>
+                     </div>
+
+                    <div>
+                        <label>Repeated Guest</label>
+                        <select name="repeated_guest" class="form-control">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+
+                    <div>Number of Previous Cancellations : <input class="form-control" name="no_of_previous_cancellations" type="number" value="0"></div>
+
+                    <div> Number of Previous Bookings Not Cancelled : <input class="form-control" name="no_of_previous_bookings_not_canceled" type="number" value="0"> </div>
+
+                    Number of Special Requests : <input class="form-control" name="no_of_special_requests" type="number" value="0">
+
+
+                    <div>
+                        <label>Market Segment</label>
+                        <select name="market_segment" class="form-control">
+                            <option value="aviation">Aviation</option>
+                            <option value="complementary">Complementary</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="online">Online</option>
+                            <option value="offline">Offline</option>
+                        </select>
+                    </div>
+
+
+                    <div>Lead Time Scaled : <input class="form-control" name="lead_time_scaled" type="number" value="0"></div>
+
+                    <div>Average Price Per Room Scaled : <input class="form-control" name="avg_price_per_room_scaled" type="number" value="0"></div>
+
+
+            <button class="btn btn-success">Predict</button>
+        </form>
+    </div>
+    </body>
+</html>
